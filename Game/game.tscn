@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6glba06yd33q"]
+[gd_scene load_steps=6 format=3 uid="uid://c6glba06yd33q"]
 
 [ext_resource type="PackedScene" uid="uid://1ahjaqr2a7fd" path="res://pieces/bocchi/bocchi.tscn" id="1_0oipu"]
 [ext_resource type="PackedScene" uid="uid://b8hfeuplo7a1a" path="res://box/walls/walls.tscn" id="2_mddje"]
 [ext_resource type="PackedScene" uid="uid://dl8eayv41yyu1" path="res://box/Floor/floor.tscn" id="3_e5e1i"]
+[ext_resource type="PackedScene" uid="uid://oscw6nvcfngw" path="res://pieces/pig/pig.tscn" id="4_rygla"]
+[ext_resource type="PackedScene" uid="uid://dg01suwhqebn6" path="res://pieces/Blahaj/blahaj.tscn" id="5_6p1nc"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(383, 127)
@@ -12,8 +14,13 @@ position = Vector2(383, 127)
 [node name="Walls" parent="." instance=ExtResource("2_mddje")]
 position = Vector2(102, 9)
 
-[node name="Floor" parent="." instance=ExtResource("3_e5e1i")]
+[node name="Area2D" parent="." instance=ExtResource("3_e5e1i")]
 position = Vector2(-2, 121)
 
 [node name="Walls2" parent="." instance=ExtResource("2_mddje")]
 position = Vector2(-104, 8)
+
+[node name="Pig" parent="." instance=ExtResource("4_rygla")]
+position = Vector2(-359, -17)
+
+[node name="Blahaj" parent="." instance=ExtResource("5_6p1nc")]

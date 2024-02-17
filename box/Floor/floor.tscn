@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dl8eayv41yyu1"]
+[gd_scene load_steps=4 format=3 uid="uid://dl8eayv41yyu1"]
 
 [ext_resource type="Texture2D" uid="uid://763t7kgk67x7" path="res://icon.svg" id="1_a4257"]
+[ext_resource type="Script" path="res://box/Floor/floor.gd" id="1_tpw0u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yaljc"]
 size = Vector2(186, 20)
 
 [node name="Floor" type="Area2D"]
-collision_layer = 0
+script = ExtResource("1_tpw0u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yaljc")
@@ -15,3 +16,5 @@ shape = SubResource("RectangleShape2D_yaljc")
 position = Vector2(0.999994, 0.25)
 scale = Vector2(1.4375, 0.160156)
 texture = ExtResource("1_a4257")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
