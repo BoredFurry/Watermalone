@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://dg01suwhqebn6"]
+[gd_scene load_steps=5 format=3 uid="uid://dg01suwhqebn6"]
+
+[ext_resource type="Script" path="res://pieces/Blahaj/blahaj.gd" id="1_6b3fi"]
+[ext_resource type="Texture2D" uid="uid://763t7kgk67x7" path="res://icon.svg" id="1_qfbrf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjnp5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ud8v"]
 
 [node name="Blahaj" type="Node2D"]
+script = ExtResource("1_6b3fi")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_qfbrf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+scale = Vector2(9.04, 9.04)
+shape = SubResource("CircleShape2D_cjnp5")
+
+[node name="AreaRats" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRats"]
+scale = Vector2(9.04, 9.04)
+shape = SubResource("CircleShape2D_2ud8v")
+
+[connection signal="area_entered" from="AreaRats" to="." method="_on_area_2d_area_entered"]
