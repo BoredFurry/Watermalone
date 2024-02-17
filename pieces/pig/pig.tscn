@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://oscw6nvcfngw"]
+[gd_scene load_steps=3 format=3 uid="uid://oscw6nvcfngw"]
 
-[node name="Pig" type="Node2D"]
+[ext_resource type="Script" path="res://pieces/pig/pig.gd" id="1_64570"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4q3t"]
+
+[node name="Pig" type="Area2D"]
+script = ExtResource("1_64570")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_e4q3t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
