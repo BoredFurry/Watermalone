@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://dg01suwhqebn6"]
+[gd_scene load_steps=2 format=3 uid="uid://dg01suwhqebn6"]
 
-[node name="Blahaj" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghfh3"]
+
+[node name="Blahaj" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ghfh3")
