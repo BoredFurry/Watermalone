@@ -6,8 +6,7 @@ const Soccat = preload("res://pieces/SOC camp cat/soccat.tscn")
 const MasterChief = preload("res://pieces/MasterChief/masterchief.tscn")
 const Bocchi = preload("res://pieces/bocchi/bocchi.tscn")
 const Rat = preload("res://pieces/rat/rat.tscn")
-const Blahaj = preload("res://pieces/Blahaj/blahaj.tscn")
-
+const Blahaj = preload("res://pieces/Blahaj/blahaj.tscn")  
 
 func spawn_otter(position):
 	var otter = Otter.instantiate()
@@ -17,7 +16,7 @@ func spawn_otter(position):
 func spawn_soccat(position):
 	var soccat = Soccat.instantiate()
 	soccat.set_position(position)
-	self.add_child(soccat)
+	self.call_deferred("add_child", soccat)
 	
 func spawn_masterChief(position):
 	var masterChief = MasterChief.instantiate()
@@ -38,3 +37,6 @@ func spawn_blahaj(position):
 	var blahaj = Blahaj.instantiate()
 	blahaj.set_position(position)
 	self.add_child(blahaj)
+
+
+# create

@@ -3,13 +3,13 @@
 [ext_resource type="Script" path="res://box/Floor/floor.gd" id="1_tpw0u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_je5ph"]
-size = Vector2(205, 24.5833)
+size = Vector2(271.929, 24.5833)
 
 [node name="Floor" type="StaticBody2D" groups=["box"]]
 script = ExtResource("1_tpw0u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.2, 7.96398e-06)
+position = Vector2(3.8147e-06, 1.19209e-07)
 rotation = 3.14159
 scale = Vector2(2.8, 0.96)
 shape = SubResource("RectangleShape2D_je5ph")

@@ -7,3 +7,8 @@ func _on_area_2d_body_entered(body):
 		self.get_parent().spawn_soccat(position)
 		body.queue_free()
 		self.queue_free()
+	elif (position.y == body.position.y):
+		if (position.x > body.position.x):
+			self.get_parent().spawn_soccat(position)
+			body.queue_free()
+			self.queue_free()
