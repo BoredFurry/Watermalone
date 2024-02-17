@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yaljc"]
 size = Vector2(186, 20)
 
-[node name="Floor" type="Area2D"]
+[node name="Floor" type="StaticBody2D"]
 script = ExtResource("1_tpw0u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -16,5 +16,3 @@ shape = SubResource("RectangleShape2D_yaljc")
 position = Vector2(0.999994, 0.25)
 scale = Vector2(1.4375, 0.160156)
 texture = ExtResource("1_a4257")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
