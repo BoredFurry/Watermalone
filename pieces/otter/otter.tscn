@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://btl28igcr16pm"]
 
-[ext_resource type="Texture2D" uid="uid://763t7kgk67x7" path="res://icon.svg" id="1_2l5un"]
 [ext_resource type="Script" path="res://pieces/otter/otter.gd" id="1_4ehwk"]
+[ext_resource type="Texture2D" path="res://pieces/otter/Otter.svg" id="2_ybdck"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_510gw"]
-radius = 48.1531
+radius = 118.7
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x72ed"]
-radius = 10.8736
+radius = 26.3536
 
 [node name="Otter" type="RigidBody2D" groups=["otter"]]
 script = ExtResource("1_4ehwk")
@@ -17,14 +17,14 @@ scale = Vector2(0.27077, 0.27077)
 shape = SubResource("CircleShape2D_510gw")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-0.250227, -0.250242)
-scale = Vector2(0.793324, 0.793324)
-texture = ExtResource("1_2l5un")
+scale = Vector2(0.143525, 0.143525)
+texture = ExtResource("2_ybdck")
 
 [node name="Area2D" type="Area2D" parent="."]
 scale = Vector2(0.153846, 0.179487)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3.05176e-05, 0)
 scale = Vector2(7.68096, 6.65715)
 shape = SubResource("CircleShape2D_x72ed")
 

@@ -1,27 +1,29 @@
 [gd_scene load_steps=4 format=3 uid="uid://j1cw0j5riw7b"]
 
-[ext_resource type="Texture2D" uid="uid://763t7kgk67x7" path="res://icon.svg" id="1_qfbrf"]
+[ext_resource type="Texture2D" path="res://pieces/Blahaj/Shark.svg" id="1_fy4br"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mgup7"]
-radius = 48.1531
+radius = 99.7156
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qqsgs"]
-radius = 10.8736
+radius = 23.754
 
 [node name="Blahaj" type="RigidBody2D" groups=["blahaj"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.76837e-07, 9.53674e-07)
 scale = Vector2(0.27077, 0.27077)
 shape = SubResource("CircleShape2D_mgup7")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-0.250227, -0.250242)
-scale = Vector2(0.793324, 0.793324)
-texture = ExtResource("1_qfbrf")
+position = Vector2(0, -2.86102e-06)
+scale = Vector2(0.144669, 0.144669)
+texture = ExtResource("1_fy4br")
 
 [node name="Area2D" type="Area2D" parent="."]
 scale = Vector2(0.153846, 0.179487)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6.10352e-05, 0)
 scale = Vector2(7.68096, 6.65715)
 shape = SubResource("CircleShape2D_qqsgs")

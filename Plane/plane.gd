@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 600
+const SPEED = 300
 var is_left = true
 
 

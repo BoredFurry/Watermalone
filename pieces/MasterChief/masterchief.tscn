@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmp0ns7bley4r"]
 
 [ext_resource type="Script" path="res://pieces/MasterChief/masterChief.gd" id="1_isltb"]
-[ext_resource type="Texture2D" uid="uid://763t7kgk67x7" path="res://icon.svg" id="1_ybjgl"]
+[ext_resource type="Texture2D" path="res://pieces/MasterChief/MasterChief.svg" id="2_4i7jn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_32v5c"]
-radius = 48.1531
+radius = 77.6445
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fah6s"]
-radius = 10.8736
+radius = 16.9457
 
 [node name="MasterChief" type="RigidBody2D" groups=["masterChief"]]
 script = ExtResource("1_isltb")
@@ -17,13 +17,14 @@ scale = Vector2(0.27077, 0.27077)
 shape = SubResource("CircleShape2D_32v5c")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-0.250227, -0.250242)
-scale = Vector2(0.793324, 0.793324)
-texture = ExtResource("1_ybjgl")
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(0.098836, 0.096392)
+texture = ExtResource("2_4i7jn")
 
 [node name="Area2D" type="Area2D" parent="."]
 scale = Vector2(0.153846, 0.179487)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-7.62939e-06, 0)
 scale = Vector2(7.68096, 6.65715)
 shape = SubResource("CircleShape2D_fah6s")
