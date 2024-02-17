@@ -11,5 +11,10 @@ config_version=5
 [application]
 
 config/name="Watermalone"
+run/main_scene="res://Game/game.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Game="*res://game.gd"
