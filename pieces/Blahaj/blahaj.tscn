@@ -4,8 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://763t7kgk67x7" path="res://icon.svg" id="1_qfbrf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cjnp5"]
+radius = 6.32082
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ud8v"]
+radius = 5.97755
 
 [node name="Blahaj" type="Node2D"]
 script = ExtResource("1_6b3fi")
@@ -13,15 +15,18 @@ script = ExtResource("1_6b3fi")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.882813, 0.882813)
 texture = ExtResource("1_qfbrf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 1)
 scale = Vector2(9.04, 9.04)
 shape = SubResource("CircleShape2D_cjnp5")
 
 [node name="AreaRats" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRats"]
+position = Vector2(-7.62939e-06, 4.76837e-07)
 scale = Vector2(9.04, 9.04)
 shape = SubResource("CircleShape2D_2ud8v")
 

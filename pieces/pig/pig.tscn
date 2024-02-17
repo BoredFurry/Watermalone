@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://oscw6nvcfngw"]
+[gd_scene load_steps=3 format=3 uid="uid://oscw6nvcfngw"]
+
+[ext_resource type="Texture2D" path="res://pieces/pig/water_pig_default_2.svg" id="1_4ye55"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mwcus"]
+radius = 46.5296
 
 [node name="Pig" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.368217, 0.368217)
+texture = ExtResource("1_4ye55")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mwcus")

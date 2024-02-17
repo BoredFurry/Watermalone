@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6glba06yd33q"]
+[gd_scene load_steps=4 format=3 uid="uid://c6glba06yd33q"]
 
-[ext_resource type="Script" path="res://Game/game.gd" id="1_1lycx"]
+[ext_resource type="PackedScene" uid="uid://1ahjaqr2a7fd" path="res://pieces/bocchi/bocchi.tscn" id="1_0oipu"]
+[ext_resource type="PackedScene" uid="uid://b8hfeuplo7a1a" path="res://box/walls/walls.tscn" id="2_mddje"]
+[ext_resource type="PackedScene" uid="uid://dl8eayv41yyu1" path="res://box/Floor/floor.tscn" id="3_e5e1i"]
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_1lycx")
+position = Vector2(383, 127)
+
+[node name="Walls" parent="." instance=ExtResource("2_mddje")]
+position = Vector2(102, 9)
+
+[node name="Area2D" parent="." instance=ExtResource("3_e5e1i")]
+position = Vector2(-2, 121)
+
+[node name="Walls2" parent="." instance=ExtResource("2_mddje")]
+position = Vector2(-104, 8)
+
+[node name="Bocchi" parent="." instance=ExtResource("1_0oipu")]
