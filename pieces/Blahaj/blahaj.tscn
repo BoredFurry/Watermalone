@@ -1,28 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://dg01suwhqebn6"]
+[gd_scene load_steps=4 format=3 uid="uid://j1cw0j5riw7b"]
 
-[ext_resource type="Script" path="res://pieces/Blahaj/blahaj.gd" id="1_6b3fi"]
 [ext_resource type="Texture2D" uid="uid://763t7kgk67x7" path="res://icon.svg" id="1_qfbrf"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cjnp5"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_mgup7"]
+radius = 48.1531
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2ud8v"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qqsgs"]
+radius = 10.8736
 
-[node name="Blahaj" type="Node2D"]
-script = ExtResource("1_6b3fi")
+[node name="Blahaj" type="RigidBody2D" groups=["blahaj"]]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.27077, 0.27077)
+shape = SubResource("CircleShape2D_mgup7")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-0.250227, -0.250242)
+scale = Vector2(0.793324, 0.793324)
 texture = ExtResource("1_qfbrf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-scale = Vector2(9.04, 9.04)
-shape = SubResource("CircleShape2D_cjnp5")
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.153846, 0.179487)
 
-[node name="AreaRats" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRats"]
-scale = Vector2(9.04, 9.04)
-shape = SubResource("CircleShape2D_2ud8v")
-
-[connection signal="area_entered" from="AreaRats" to="." method="_on_area_2d_area_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(7.68096, 6.65715)
+shape = SubResource("CircleShape2D_qqsgs")

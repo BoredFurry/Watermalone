@@ -1,9 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6glba06yd33q"]
+[gd_scene load_steps=6 format=3 uid="uid://c6glba06yd33q"]
 
-[ext_resource type="Script" path="res://Game/game.gd" id="1_1lycx"]
-[ext_resource type="PackedScene" uid="uid://blmpjx0y4wen1" path="res://Plane/plane.tscn" id="2_ipqvo"]
+[ext_resource type="Script" path="res://Game/game.gd" id="1_cb175"]
+[ext_resource type="PackedScene" uid="uid://b8hfeuplo7a1a" path="res://box/walls/walls.tscn" id="2_mddje"]
+[ext_resource type="PackedScene" uid="uid://dl8eayv41yyu1" path="res://box/Floor/floor.tscn" id="3_e5e1i"]
+[ext_resource type="PackedScene" uid="uid://c8crase7y1cyp" path="res://pieces/pig/pig.tscn" id="4_ygayu"]
+[ext_resource type="PackedScene" uid="uid://btl28igcr16pm" path="res://pieces/otter/otter.tscn" id="5_hcr5a"]
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_1lycx")
+position = Vector2(383, 127)
+script = ExtResource("1_cb175")
 
-[node name="Plane" parent="." instance=ExtResource("2_ipqvo")]
+[node name="Walls" parent="." instance=ExtResource("2_mddje")]
+position = Vector2(424, 114)
+
+[node name="Area2D" parent="." instance=ExtResource("3_e5e1i")]
+position = Vector2(157, 390)
+
+[node name="Walls2" parent="." instance=ExtResource("2_mddje")]
+position = Vector2(-125, 119)
+
+[node name="Pig" parent="." instance=ExtResource("4_ygayu")]
+position = Vector2(1, -14)
+
+[node name="Pig2" parent="." instance=ExtResource("4_ygayu")]
+position = Vector2(-12, 51)
+
+[node name="Otter" parent="." instance=ExtResource("5_hcr5a")]
+position = Vector2(-22, 353)
