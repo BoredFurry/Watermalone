@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8hfeuplo7a1a"]
+[gd_scene load_steps=3 format=3 uid="uid://b8hfeuplo7a1a"]
 
 [ext_resource type="Script" path="res://box/walls/walls.gd" id="1_s8ild"]
-[ext_resource type="Texture2D" uid="uid://763t7kgk67x7" path="res://icon.svg" id="2_2pt81"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ht38"]
 size = Vector2(205, 28.75)
@@ -14,9 +13,3 @@ position = Vector2(4.2, 1.5204e-05)
 rotation = 1.5708
 scale = Vector2(2.8, 0.96)
 shape = SubResource("RectangleShape2D_0ht38")
-
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-7.53205e-06, -0.500002)
-rotation = -1.5708
-scale = Vector2(0.195313, 1.64063)
-texture = ExtResource("2_2pt81")
