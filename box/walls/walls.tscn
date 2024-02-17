@@ -4,19 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://763t7kgk67x7" path="res://icon.svg" id="2_2pt81"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ht38"]
-size = Vector2(205, 20)
+size = Vector2(205, 28.75)
 
-[node name="Walls" type="Area2D"]
-collision_layer = 0
+[node name="Walls" type="StaticBody2D" groups=["box"]]
 script = ExtResource("1_s8ild")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.2, 1.5204e-05)
 rotation = 1.5708
+scale = Vector2(2.8, 0.96)
 shape = SubResource("RectangleShape2D_0ht38")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.500002, -5.72205e-06)
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-7.53205e-06, -0.500002)
+rotation = -1.5708
 scale = Vector2(0.195313, 1.64063)
 texture = ExtResource("2_2pt81")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

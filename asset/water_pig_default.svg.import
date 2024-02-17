@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqu2auy6vf3a5"
-path="res://.godot/imported/water_pig_default.svg-ad0fee7e48b834dee71e34a77ef79f4c.ctex"
+path="res://.godot/imported/water_pig_default.svg-d176bf43fb70799eecb6c36e70c926bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pieces/pig/water_pig_default.svg"
-dest_files=["res://.godot/imported/water_pig_default.svg-ad0fee7e48b834dee71e34a77ef79f4c.ctex"]
+source_file="res://asset/water_pig_default.svg"
+dest_files=["res://.godot/imported/water_pig_default.svg-d176bf43fb70799eecb6c36e70c926bc.ctex"]
 
 [params]
 

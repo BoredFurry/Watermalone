@@ -1,12 +1,9 @@
-extends CharacterBody2D
+extends RigidBody2D
 
-var gravity = 100
-
-func _ready():
-	up_direction = Vector2(0, -1)
-
-func _physics_process(delta):
-	if not is_on_floor():
-		velocity.y += gravity * delta
-	
-	move_and_slide()
+func _on_area_2d_body_entered(body):
+	if (!body.is_in_group("bocchi")):
+		return
+	if (position.y > body.position.y):
+		self.get_parent().spawn_rat(position)
+		body.queue_free()
+		self.queue_free()
