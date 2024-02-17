@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://oscw6nvcfngw"]
+[gd_scene load_steps=2 format=3 uid="uid://oscw6nvcfngw"]
 
-[node name="Pig" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdufb"]
+
+[node name="Pig" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pdufb")
