@@ -1,25 +1,40 @@
 extends Node2D
 
-enum Animal {
-	Blahaj,
-	Rats,
-	Bocchi
-}
+const Pig = preload("res://pieces/pig/pig.tscn")
+const Otter = preload("res://pieces/otter/otter.tscn")
+const Soccat = preload("res://pieces/SOC camp cat/soccat.tscn")
+const MasterChief = preload("res://pieces/MasterChief/masterchief.tscn")
+const Bocchi = preload("res://pieces/bocchi/bocchi.tscn")
+const Rat = preload("res://pieces/rat/rat.tscn")
+const Blahaj = preload("res://pieces/Blahaj/blahaj.tscn")
 
-var killed_animal_count = {
-	Animal.Blahaj: 0,
-	Animal.Rats: 0,
-	Animal.Bocchi: 0
-}
 
-func handle_animal_interaction(animal):
-	killed_animal_count[animal] += 1
+func spawn_otter(position):
+	var otter = Otter.instantiate()
+	otter.set_position(position)
+	self.add_child(otter)
+
+func spawn_soccat(position):
+	var soccat = Soccat.instantiate()
+	soccat.set_position(position)
+	self.add_child(soccat)
 	
-	while (killed_animal_count == 2):
-		killed_animal_count[animal] -= 2;
-		if (animal != Animal.Blahaj):
-			add_child(get_larger_animal(animal))
+func spawn_masterChief(position):
+	var masterChief = MasterChief.instantiate()
+	masterChief.set_position(position)
+	self.add_child(masterChief)
 
-func get_larger_animal(animal):
-	pass
+func spawn_bocchi(position):
+	var bocchi = Bocchi.instantiate()
+	bocchi.set_position(position)
+	self.add_child(bocchi)
 
+func spawn_rat(position):
+	var rat = Rat.instantiate()
+	rat.set_position(position)
+	self.add_child(rat)
+
+func spawn_blahaj(position):
+	var blahaj = Blahaj.instantiate()
+	blahaj.set_position(position)
+	self.add_child(blahaj)
